@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'application'
+}
+
+group = 'io.appwrite'
+version = '1.0'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "io.appwrite:sdk-for-kotlin:0.0.1"
+    implementation "com.google.code.gson:gson:2.8.8"
+}
+
+test {
+    useJUnit()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '11'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '11'
+}
